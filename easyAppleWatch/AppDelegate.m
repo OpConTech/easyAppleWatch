@@ -17,29 +17,74 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    // If network is reachable ready the Apple Watch
+    [self readyTheAppleWatch];
+    
     return YES;
 }
 
-- (void)applicationWillResignActive:(UIApplication *)application {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+
+- (void)readyTheAppleWatch
+{
+    
+    NSLog(@"Checking for Apple Watch...");
+    
+    if ([WCSession isSupported]) {
+        WCSession *watchSession = [WCSession defaultSession];
+        watchSession.delegate = self;
+        [watchSession activateSession];
+        
+        if (watchSession.paired) {
+            NSLog(@"WatchSession is Paired and Ready √");
+        }
+        
+        if (watchSession.watchAppInstalled == NO) {
+            
+            NSLog(@"WatchKit app is not installed");
+            
+        } else {
+            
+            NSLog(@"KnowledgeKeeper for Apple Watch is Installed on Watch √");
+            // Do Something...
+            
+        }
+        
+    } else {
+        
+        NSLog(@"WatchConnectivity is not supported on this device");
+    }
+    
 }
 
-- (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+
+- (void)applicationDidEnterBackground:(UIApplication *)application
+{
+    UIApplication *app = [UIApplication sharedApplication];
+    UIBackgroundTaskIdentifier bgTask = 0;
+    bgTask = [app beginBackgroundTaskWithExpirationHandler:^{
+        [app endBackgroundTask:bgTask];
+    }];
 }
 
-- (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-}
 
-- (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-}
 
-- (void)applicationWillTerminate:(UIApplication *)application {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-}
+-(void)session:(WCSession *)session didReceiveMessage:(nonnull NSDictionary<NSString *,id> *)dataFromWatch replyHandler:(nonnull void (^)(NSDictionary<NSString *,id> * _Nonnull))reply
+{
+    
+    NSLog(@"handleWatchKitExtensionRequest:(NSDictionary *)userInfo -- Request No %@ is From: %@", [dataFromWatch objectForKey:@"requestNumber"], [dataFromWatch objectForKey:@"requestFrom"]);
+    //NSLog(@"handleWatchKitExtensionRequest:(NSDictionary *)userInfo -- The Request is From: %@", [userInfo valueForKey:@"requestFrom"]);
+                                    
+    // Setup results dictionary...
+    NSDictionary *result = [[NSMutableDictionary alloc] init];
+    
+    // Setup dictionary to send to Apple Watch
+    result = @{@"Data Point One From iPhone": @(1), @"Data Point Two From iPhone": @(2), @"Data Point Three From iPhone": @"Hello Apple Watch!"};
+
+    // Sending to Apple Watch
+    NSLog(@"Sending Reply Back to GLANCE");
+    reply(result);
+    
+} 
 
 @end
