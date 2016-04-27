@@ -82,9 +82,9 @@
     result = @{@"Data Point One From iPhone": @(1), @"Data Point Two From iPhone": @(2), @"Data Point Three From iPhone": @"Hello Apple Watch!"};
 
     // Sending to Apple Watch
-    NSLog(@"Sending Reply Back to GLANCE");
+    NSLog(@"Sending Reply Back to Watch App");
     reply(result);
     
-} 
+}
 
 @end
