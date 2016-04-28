@@ -9,9 +9,6 @@
 /* Begin PBXBuildFile section */
 		21C9E82B1CD1486F00D6B8C6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C9E82A1CD1486F00D6B8C6 /* main.m */; };
 		21C9E82E1CD1486F00D6B8C6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C9E82D1CD1486F00D6B8C6 /* AppDelegate.m */; };
-		21C9E8311CD1486F00D6B8C6 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C9E8301CD1486F00D6B8C6 /* FirstViewController.m */; };
-		21C9E8341CD1486F00D6B8C6 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C9E8331CD1486F00D6B8C6 /* SecondViewController.m */; };
-		21C9E8371CD1486F00D6B8C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21C9E8351CD1486F00D6B8C6 /* Main.storyboard */; };
 		21C9E8391CD1486F00D6B8C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21C9E8381CD1486F00D6B8C6 /* Assets.xcassets */; };
 		21C9E83C1CD1486F00D6B8C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21C9E83A1CD1486F00D6B8C6 /* LaunchScreen.storyboard */; };
 		21C9E8471CD1486F00D6B8C6 /* easyAppleWatchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C9E8461CD1486F00D6B8C6 /* easyAppleWatchTests.m */; };
@@ -26,6 +23,9 @@
 		21C9E8851CD149B400D6B8C6 /* ComplicationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C9E8841CD149B400D6B8C6 /* ComplicationController.m */; };
 		21C9E8871CD149B400D6B8C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21C9E8861CD149B400D6B8C6 /* Assets.xcassets */; };
 		21C9E88B1CD149B400D6B8C6 /* easyAppleWatchApp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 21C9E8641CD149B400D6B8C6 /* easyAppleWatchApp.app */; };
+		21FE91B91CD1A58700D9A52C /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FE91B61CD1A58700D9A52C /* MasterViewController.m */; };
+		21FE91BA1CD1A58700D9A52C /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FE91B81CD1A58700D9A52C /* DetailViewController.m */; };
+		21FE91BC1CD1AEF200D9A52C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21FE91BB1CD1AEF200D9A52C /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,11 +89,6 @@
 		21C9E82A1CD1486F00D6B8C6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		21C9E82C1CD1486F00D6B8C6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		21C9E82D1CD1486F00D6B8C6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		21C9E82F1CD1486F00D6B8C6 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		21C9E8301CD1486F00D6B8C6 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		21C9E8321CD1486F00D6B8C6 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		21C9E8331CD1486F00D6B8C6 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		21C9E8361CD1486F00D6B8C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		21C9E8381CD1486F00D6B8C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21C9E83B1CD1486F00D6B8C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		21C9E83D1CD1486F00D6B8C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -121,6 +116,11 @@
 		21C9E8841CD149B400D6B8C6 /* ComplicationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComplicationController.m; sourceTree = "<group>"; };
 		21C9E8861CD149B400D6B8C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21C9E8881CD149B400D6B8C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21FE91B51CD1A58700D9A52C /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		21FE91B61CD1A58700D9A52C /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		21FE91B71CD1A58700D9A52C /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		21FE91B81CD1A58700D9A52C /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		21FE91BB1CD1AEF200D9A52C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,11 +184,11 @@
 			children = (
 				21C9E82C1CD1486F00D6B8C6 /* AppDelegate.h */,
 				21C9E82D1CD1486F00D6B8C6 /* AppDelegate.m */,
-				21C9E82F1CD1486F00D6B8C6 /* FirstViewController.h */,
-				21C9E8301CD1486F00D6B8C6 /* FirstViewController.m */,
-				21C9E8321CD1486F00D6B8C6 /* SecondViewController.h */,
-				21C9E8331CD1486F00D6B8C6 /* SecondViewController.m */,
-				21C9E8351CD1486F00D6B8C6 /* Main.storyboard */,
+				21FE91B51CD1A58700D9A52C /* MasterViewController.h */,
+				21FE91B61CD1A58700D9A52C /* MasterViewController.m */,
+				21FE91B71CD1A58700D9A52C /* DetailViewController.h */,
+				21FE91B81CD1A58700D9A52C /* DetailViewController.m */,
+				21FE91BB1CD1AEF200D9A52C /* Main.storyboard */,
 				21C9E8381CD1486F00D6B8C6 /* Assets.xcassets */,
 				21C9E83A1CD1486F00D6B8C6 /* LaunchScreen.storyboard */,
 				21C9E83D1CD1486F00D6B8C6 /* Info.plist */,
@@ -408,9 +408,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21FE91BC1CD1AEF200D9A52C /* Main.storyboard in Resources */,
 				21C9E83C1CD1486F00D6B8C6 /* LaunchScreen.storyboard in Resources */,
 				21C9E8391CD1486F00D6B8C6 /* Assets.xcassets in Resources */,
-				21C9E8371CD1486F00D6B8C6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,10 +452,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21C9E8341CD1486F00D6B8C6 /* SecondViewController.m in Sources */,
 				21C9E82E1CD1486F00D6B8C6 /* AppDelegate.m in Sources */,
-				21C9E8311CD1486F00D6B8C6 /* FirstViewController.m in Sources */,
+				21FE91B91CD1A58700D9A52C /* MasterViewController.m in Sources */,
 				21C9E82B1CD1486F00D6B8C6 /* main.m in Sources */,
+				21FE91BA1CD1A58700D9A52C /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,14 +513,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		21C9E8351CD1486F00D6B8C6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				21C9E8361CD1486F00D6B8C6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		21C9E83A1CD1486F00D6B8C6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -771,6 +763,7 @@
 				21C9E8581CD1486F00D6B8C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		21C9E8591CD1486F00D6B8C6 /* Build configuration list for PBXNativeTarget "easyAppleWatchTests" */ = {
 			isa = XCConfigurationList;
@@ -779,6 +772,7 @@
 				21C9E85B1CD1486F00D6B8C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		21C9E85C1CD1486F00D6B8C6 /* Build configuration list for PBXNativeTarget "easyAppleWatchUITests" */ = {
 			isa = XCConfigurationList;
@@ -787,6 +781,7 @@
 				21C9E85E1CD1486F00D6B8C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		21C9E88C1CD149B400D6B8C6 /* Build configuration list for PBXNativeTarget "easyAppleWatchApp Extension" */ = {
 			isa = XCConfigurationList;
@@ -795,6 +790,7 @@
 				21C9E88E1CD149B400D6B8C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		21C9E8901CD149B400D6B8C6 /* Build configuration list for PBXNativeTarget "easyAppleWatchApp" */ = {
 			isa = XCConfigurationList;
@@ -803,6 +799,7 @@
 				21C9E8921CD149B400D6B8C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
